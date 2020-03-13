@@ -1,0 +1,10 @@
+header {
+    background-color: blue;
+}
+header h1, header h2 {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
