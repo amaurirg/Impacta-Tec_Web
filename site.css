@@ -1,3 +1,6 @@
+body {
+    font-family: sans-serif;
+}
 header {
     background-color: blue;
 }
@@ -5,6 +8,18 @@ header h1, header h2 {
     color: white;
 }
 
-ul {
+ul.sem-bullets {
     list-style-type: none;
+}
+
+a.link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+footer {
+    background-color: "CECECE";
+    text-align: center;
 }
