@@ -24,9 +24,15 @@
 			<h3>Navegue pelo nosso site</h3>
 			<ul>
 				<li><a href="{% url 'cursos:lista' %}" >Cursos</a></li>
-				<li><a href="premios/" >Prêmios</a></li>
+				<li><a href="premios.html" >Prêmios</a></li>
 				<li><a href="eventos.html" >Eventos</a></li>
-				<li><a href="entrar.html" >Entrar</a></li>
+				{% if user.is_authenticated %}
+					<li>Olá {{ user }}</li>
+					<li><a href="entrar.html" >Sair</a></li>
+				{% else %}
+					<li><a href="entrar.html" >Entrar</a></li>
+					<li><a href="{% url 'contas:registrar' %}" >Registrar</a></li>
+				{% endif %}
 			</ul>
 		</nav>
 	</header>
